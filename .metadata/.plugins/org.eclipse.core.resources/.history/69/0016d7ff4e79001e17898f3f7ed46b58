@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee /WEB-INF/schema/web-facesconfig_2_2.xsd"
+	version="2.2">
+
+	<!-- This file must be present with our jar, even if it is empty. Otherwise, 
+		our Java annotations won't get scanned! -->
+
+	<managed-bean>
+		<managed-bean-name>pBeanImpl</managed-bean-name>
+		<managed-bean-class>com.java.jsp.PatientDaoImpl</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>patient</managed-bean-name>
+		<managed-bean-class>com.java.jsp.Patient</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<!-- <managed-bean-name>patientController</managed-bean-name> <managed-bean-class>com.java.jsp.PatientController</managed-bean-class> 
+		<managed-bean-scope>request</managed-bean-scope> <managed-property> <property-name>patient</property-name> 
+		<property-class>com.java.jsp.Patient</property-class> <value>#{patient}</value> 
+		</managed-property> <managed-property> <property-name>daoImpl</property-name> 
+		<property-class>com.java.jsp.PatientDaoImpl</property-class> <value>#{daoImpl}</value> 
+		</managed-property> -->
+	<managed-bean>
+		<managed-bean-name>patientController</managed-bean-name>
+		<managed-bean-class>com.java.jsp.PatientController
+		</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+			<property-name>patient</property-name>
+			<property-class>com.java.jsp.Patient</property-class>
+			<value>#{patient}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>daoImpl</property-name>
+			<property-class>com.java.jsp.PatientDaoImpl</property-class>
+			<value>#{daoImpl}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>resDao</property-name>
+			<property-class>com.java.rms.RestaurantDaoImpl</property-class>
+			<value>#{resDao}</value>
+		</managed-property>
+	</managed-bean>
+</faces-config>

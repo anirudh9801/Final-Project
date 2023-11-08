@@ -11,6 +11,7 @@ CREATE TABLE patient_enrollment (
     Gender ENUM('MALE', 'FEMALE', 'OTHER'),
     userName VARCHAR(50),
     Phone_no VARCHAR(50),
+	Password VARCHAR(50),
     email VARCHAR(200),
 	status VARCHAR(50),
     cause VARCHAR(500),
